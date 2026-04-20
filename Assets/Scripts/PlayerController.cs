@@ -3,15 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float rotationSpeed = 150.0f;
 
-    private Camera mainCamera;
-
-    private void Start()
-    {
-        mainCamera = Camera.main;
-        //Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
     private void Update()
     {
         float movementY = 0;
@@ -20,18 +13,16 @@ public class PlayerController : MonoBehaviour
             movementY = 1;
         if (Input.GetKey(KeyCode.LeftControl))
             movementY = -1;
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), movementY, Input.GetAxis("Vertical"));
 
-        transform.Translate(movement * (speed * Time.deltaTime));
+        float turn = Input.GetAxis("Horizontal");
 
-        Vector3 playerScreenPos = mainCamera.WorldToScreenPoint(transform.position);
-        Vector3 mousePos = Input.mousePosition;
+        transform.Rotate(0f, turn * rotationSpeed * Time.deltaTime, 0f);
 
-        float deltaX = mousePos.x - playerScreenPos.x;
-        float deltaY = mousePos.y - playerScreenPos.y;
+        Vector3 forwardMovement = transform.forward * Input.GetAxis("Vertical");
+        Vector3 verticalMovement = Vector3.up * movementY;
 
-        float angle = Mathf.Atan2(deltaX, deltaY) * Mathf.Rad2Deg;
+        Vector3 finalMovement = forwardMovement + verticalMovement;
 
-        transform.eulerAngles = new Vector3(0f, angle, 0f);
+        transform.Translate(finalMovement * (speed * Time.deltaTime), Space.World);
     }
 }
