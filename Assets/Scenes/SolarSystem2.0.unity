@@ -246,6 +246,7 @@ MonoBehaviour:
   rotationSpeed: 30
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &233382907
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -429,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &617239249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +682,7 @@ MonoBehaviour:
   rotationSpeed: 0
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 0}
 --- !u!114 &632850823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +700,7 @@ MonoBehaviour:
   rotationSpeed: 30
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &632850824
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -986,6 +989,7 @@ MonoBehaviour:
   rotationSpeed: 10
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &752334967
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1540,6 +1544,7 @@ MonoBehaviour:
   rotationSpeed: 4
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1050010670
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2596,6 +2601,7 @@ MonoBehaviour:
   rotationSpeed: 3
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1418777968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2750,6 +2756,7 @@ MonoBehaviour:
   rotationSpeed: 3
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1513497934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2909,6 +2916,7 @@ MonoBehaviour:
   rotationSpeed: 5
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1593874176
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3068,6 +3076,7 @@ MonoBehaviour:
   rotationSpeed: 8
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1713261419
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3359,6 +3368,7 @@ MonoBehaviour:
   rotationSpeed: 0
   maxHealth: 3
   isSun: 1
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &1759891611
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3913,6 +3923,7 @@ MonoBehaviour:
   rotationSpeed: 6
   maxHealth: 3
   isSun: 0
+  hitSound: {fileID: 8300000, guid: 579b6061fc7601e4cafe6ff9fb24d7ad, type: 3}
 --- !u!54 &2000377648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4147,6 +4158,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 5703620379324283942, guid: f08e9be0a09d28c4d9ec0913526281e3, type: 3}
+    - target: {fileID: 5933817807799350072, guid: a1adc18de2736c641874af4de120e60f, type: 3}
+      propertyPath: explosionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e4388531854dcc4ab63d94b42e50cab, type: 3}
     - target: {fileID: 7366614572628914990, guid: a1adc18de2736c641874af4de120e60f, type: 3}
       propertyPath: m_Layer
       value: 8

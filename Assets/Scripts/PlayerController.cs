@@ -84,15 +84,8 @@ public class PlayerController : MonoBehaviour
         bool leftEngineActive = isMovingForward || isTurningRight;
         bool rightEngineActive = isMovingForward || isTurningLeft;
 
-        if (engineLeft != null)
-        { 
-            engineLeft.Set(leftEngineActive); 
-        }
-
-        if (engineRight != null)
-        {
-            engineRight.Set(rightEngineActive);
-        }
+        engineLeft.Set(leftEngineActive);
+        engineRight.Set(rightEngineActive);
     }
 
     private void OnCollisionEnter(Collision collision)
