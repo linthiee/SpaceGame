@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float shootingSpeed = 100.0f;
 
-    [SerializeField] private float fireRate = 0.5f; 
+    [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private AudioClip explosionSound;
+
     private float nextFireTime = 0f;
     private void Start()
     {
@@ -104,6 +106,11 @@ public class PlayerController : MonoBehaviour
     private void PlayerDeath()
     {
         Debug.Log("player collided with a planet!");
+
+        if (explosionSound != null)
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position);
+        }
 
         if (Camera.main != null)
         {

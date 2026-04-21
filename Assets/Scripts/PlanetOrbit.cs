@@ -9,6 +9,7 @@ public class PlanetOrbit : MonoBehaviour
     [SerializeField] private int maxHealth = 3;
 
     [SerializeField] private bool isSun;
+    [SerializeField] private AudioClip hitSound;     
 
     private int currentHealth;
     private void Start()
@@ -45,6 +46,11 @@ public class PlanetOrbit : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log("planet was attacked!");
+
+        if (hitSound != null)
+        {
+            AudioSource.PlayClipAtPoint(hitSound, Camera.main.transform.position);
+        }
 
         if (currentHealth <= 0)
         {
