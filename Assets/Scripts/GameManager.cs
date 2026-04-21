@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
         totalPlanets--;
         if (totalPlanets <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
+
             Victory();
         }
     }

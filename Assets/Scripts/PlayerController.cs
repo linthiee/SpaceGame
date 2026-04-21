@@ -3,25 +3,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5.0f;
+
     [SerializeField] private float rotationSpeed = 100.0f;
+    [SerializeField] private float pitchSpeed = 100.0f;
+    [SerializeField] private float rollSpeed = 100.0f;
 
     [SerializeField] private Engine engineLeft;
     [SerializeField] private Engine engineRight;
-
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform tip;
 
     [SerializeField] private float shootingSpeed = 100.0f;
-
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private AudioClip explosionSound;
 
     private float nextFireTime = 0f;
+
     private void Start()
     {
         engineLeft.Set(false);
         engineRight.Set(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
+
     private void Update()
     {
         Movement();
@@ -30,14 +35,18 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-        float turnInput = Input.GetAxis("Horizontal");
-        float forwardInput = Input.GetAxis("Vertical");
-        float verticalInput = GetVerticalInput();
+        float forwardInput = Input.GetAxis("Vertical"); 
+        float verticalInput = GetVerticalInput();      
 
-        HandleRotation(turnInput);
+        float yawInput = Input.GetAxis("Horizontal");  
+        float pitchInput = Input.GetAxis("Mouse Y");    
+        float rollInput = GetRollInput();               
+
+        HandleRotation(pitchInput, yawInput, rollInput);
         HandleMovement(forwardInput, verticalInput);
-        HandleEngines(forwardInput, turnInput);
+        HandleEngines(forwardInput, yawInput);
     }
+
     private void Shoot()
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
@@ -48,6 +57,7 @@ public class PlayerController : MonoBehaviour
             bullet.Logic(shootingSpeed);
         }
     }
+
     private float GetVerticalInput()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -61,25 +71,42 @@ public class PlayerController : MonoBehaviour
         return 0f;
     }
 
-    private void HandleRotation(float turnInput)
+    private float GetRollInput()
     {
-        transform.Rotate(0f, turnInput * rotationSpeed * Time.deltaTime, 0f);
+        if (Input.GetKey(KeyCode.Q))
+        {
+            return 1f;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            return -1f; 
+        }
+        return 0f;
+    }
+
+    private void HandleRotation(float pitchInput, float yawInput, float rollInput)
+    {
+        float pitch = -pitchInput * pitchSpeed * Time.deltaTime;
+        float yaw = yawInput * rotationSpeed * Time.deltaTime;
+        float roll = rollInput * rollSpeed * Time.deltaTime;
+
+        transform.Rotate(pitch, yaw, roll, Space.Self);
     }
 
     private void HandleMovement(float forwardInput, float verticalInput)
     {
         Vector3 forwardMovement = transform.forward * forwardInput;
-        Vector3 verticalMovement = Vector3.up * verticalInput;
+        Vector3 verticalMovement = transform.up * verticalInput;
         Vector3 finalMovement = forwardMovement + verticalMovement;
 
         transform.Translate(finalMovement * (speed * Time.deltaTime), Space.World);
     }
 
-    private void HandleEngines(float forwardInput, float turnInput)
+    private void HandleEngines(float forwardInput, float yawInput)
     {
         bool isMovingForward = forwardInput > 0.1f;
-        bool isTurningRight = turnInput > 0.1f;
-        bool isTurningLeft = turnInput < -0.1f;
+        bool isTurningRight = yawInput > 0.1f;
+        bool isTurningLeft = yawInput < -0.1f;
 
         bool leftEngineActive = isMovingForward || isTurningRight;
         bool rightEngineActive = isMovingForward || isTurningLeft;
@@ -100,7 +127,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("player collided with a planet!");
 
-        if (explosionSound != null)
+        if (explosionSound != null && Camera.main != null)
         {
             AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position);
         }
@@ -110,7 +137,13 @@ public class PlayerController : MonoBehaviour
             Camera.main.transform.SetParent(null);
         }
 
+        Cursor.lockState = CursorLockMode.None;
+
         Destroy(gameObject);
-        GameManager.Instance.GameOver();
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }
