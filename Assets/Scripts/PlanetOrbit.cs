@@ -8,10 +8,17 @@ public class PlanetOrbit : MonoBehaviour
 
     [SerializeField] private int maxHealth = 3;
 
+    [SerializeField] private bool isSun;
+
     private int currentHealth;
     private void Start()
     {
         currentHealth = maxHealth;
+
+        if (!isSun)
+        {
+            GameManager.Instance.RegisterPlanet();
+        }
     }
 
     private void Update()
@@ -47,6 +54,11 @@ public class PlanetOrbit : MonoBehaviour
     }
     private void Die()
     {
+        if (!isSun)
+        {
+            GameManager.Instance.PlanetDestroyed();
+        }
+
         Destroy(gameObject);
     }
 }

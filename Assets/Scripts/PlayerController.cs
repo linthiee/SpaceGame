@@ -104,6 +104,13 @@ public class PlayerController : MonoBehaviour
     private void PlayerDeath()
     {
         Debug.Log("player collided with a planet!");
+
+        if (Camera.main != null)
+        {
+            Camera.main.transform.SetParent(null);
+        }
+
         Destroy(gameObject);
+        GameManager.Instance.GameOver();
     }
 }
