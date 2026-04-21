@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Bullet : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var bullet = Instantiate(particlePrefab, transform.position, Quaternion.identity);
-        Destroy(other.gameObject);
+        GameObject particles = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+        Destroy(particles, 2f);
         Destroy(gameObject);
     }
 }

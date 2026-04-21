@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 233382903}
   - component: {fileID: 233382902}
   - component: {fileID: 233382906}
+  - component: {fileID: 233382907}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -243,6 +244,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 6
   rotationSpeed: 30
+  maxHealth: 3
+--- !u!54 &233382907
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233382901}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &632850817
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +286,7 @@ GameObject:
   - component: {fileID: 632850818}
   - component: {fileID: 632850823}
   - component: {fileID: 632850822}
+  - component: {fileID: 632850824}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -368,6 +398,7 @@ MonoBehaviour:
   sun: {fileID: 0}
   orbitSpeed: 0
   rotationSpeed: 0
+  maxHealth: 3
 --- !u!114 &632850823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +414,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 4
   rotationSpeed: 30
+  maxHealth: 3
+--- !u!54 &632850824
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632850817}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &752334961
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +455,7 @@ GameObject:
   - component: {fileID: 752334963}
   - component: {fileID: 752334962}
   - component: {fileID: 752334966}
+  - component: {fileID: 752334967}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -508,6 +568,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 5
   rotationSpeed: 10
+  maxHealth: 3
+--- !u!54 &752334967
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752334961}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &901760765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6390873846559621229, guid: a1adc18de2736c641874af4de120e60f, type: 3}
@@ -652,6 +740,7 @@ GameObject:
   - component: {fileID: 1050010666}
   - component: {fileID: 1050010665}
   - component: {fileID: 1050010669}
+  - component: {fileID: 1050010670}
   m_Layer: 0
   m_Name: Pluto
   m_TagString: Untagged
@@ -763,6 +852,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 5
   rotationSpeed: 4
+  maxHealth: 3
+--- !u!54 &1050010670
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050010664}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1084120918
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +972,7 @@ GameObject:
   - component: {fileID: 1272060805}
   - component: {fileID: 1272060804}
   - component: {fileID: 1272060803}
+  - component: {fileID: 1272060807}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -967,6 +1085,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272060801}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1272060807
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272060801}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1369137444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1200,7 @@ GameObject:
   - component: {fileID: 1418777964}
   - component: {fileID: 1418777963}
   - component: {fileID: 1418777967}
+  - component: {fileID: 1418777968}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -1166,6 +1312,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 2
   rotationSpeed: 3
+  maxHealth: 3
+--- !u!54 &1418777968
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418777962}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1513497928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1353,7 @@ GameObject:
   - component: {fileID: 1513497930}
   - component: {fileID: 1513497929}
   - component: {fileID: 1513497933}
+  - component: {fileID: 1513497934}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -1290,6 +1465,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 4
   rotationSpeed: 3
+  maxHealth: 3
+--- !u!54 &1513497934
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513497928}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!20 &1560946036 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6674002793927036632, guid: a1adc18de2736c641874af4de120e60f, type: 3}
@@ -1308,6 +1511,7 @@ GameObject:
   - component: {fileID: 1593874172}
   - component: {fileID: 1593874171}
   - component: {fileID: 1593874175}
+  - component: {fileID: 1593874176}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -1419,6 +1623,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 7
   rotationSpeed: 5
+  maxHealth: 3
+--- !u!54 &1593874176
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593874170}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &1687977295 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9051353733165038862, guid: a1adc18de2736c641874af4de120e60f, type: 3}
@@ -1437,6 +1669,7 @@ GameObject:
   - component: {fileID: 1713261415}
   - component: {fileID: 1713261414}
   - component: {fileID: 1713261418}
+  - component: {fileID: 1713261419}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -1548,6 +1781,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 4
   rotationSpeed: 8
+  maxHealth: 3
+--- !u!54 &1713261419
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713261413}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1759891605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1822,7 @@ GameObject:
   - component: {fileID: 1759891607}
   - component: {fileID: 1759891606}
   - component: {fileID: 1759891610}
+  - component: {fileID: 1759891611}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -1673,6 +1935,34 @@ MonoBehaviour:
   sun: {fileID: 0}
   orbitSpeed: 0
   rotationSpeed: 0
+  maxHealth: 3
+--- !u!54 &1759891611
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759891605}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1840289946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +2102,7 @@ GameObject:
   - component: {fileID: 2000377644}
   - component: {fileID: 2000377643}
   - component: {fileID: 2000377647}
+  - component: {fileID: 2000377648}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -1923,6 +2214,34 @@ MonoBehaviour:
   sun: {fileID: 1759891609}
   orbitSpeed: 4
   rotationSpeed: 6
+  maxHealth: 3
+--- !u!54 &2000377648
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000377642}
+  serializedVersion: 4
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2083847055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,7 +2371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1938808346159508734, guid: a1adc18de2736c641874af4de120e60f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 2128610836316090263, guid: a1adc18de2736c641874af4de120e60f, type: 3}
       propertyPath: m_Layer

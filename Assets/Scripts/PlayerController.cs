@@ -92,4 +92,18 @@ public class PlayerController : MonoBehaviour
             engineRight.Set(rightEngineActive);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent<PlanetOrbit>(out PlanetOrbit planetComponent))
+        {
+            PlayerDeath();
+        }
+    }
+
+    private void PlayerDeath()
+    {
+        Debug.Log("player collided with a planet!");
+        Destroy(gameObject);
+    }
 }
